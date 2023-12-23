@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #8628a391;
+}
+
+.mainBox {
+  border: 1px solid black;
+  position: relative;
+  min-width: 200px;
+  max-width: 400px;
+  min-height: 300px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.mainBox::before {
+  content: " ";
+  position: absolute;
+  background-image: linear-gradient(
+      0deg,
+      rgb(79, 14, 81, 0.9),
+      rgb(79, 14, 81, 0.8)
+    ),
+    url("https://img.freepik.com/free-photo/diet-menu-healthy-vegetarian-salad-fresh-vegetables-tomatoes-cucumber-sweet-peppers-porridge-bowl-vegan-food_2829-19933.jpg?size=626&ext=jpg");
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.ulStyle {
+  list-style: none;
+  margin: 10px;
+  border-bottom: none;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(67, 2, 70);
+  margin-bottom: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 45px;
+  text-shadow: 0 0 4px #eb0808, 0 0 5px #c300ff;
+}
+.inp {
+  width: 90%;
+  height: 30px;
+  outline: none;
+  margin-left: 10px;
+  padding: 1rem;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid rgb(63, 56, 56);
+}
+.list {
+  border: 1px solid rgb(49, 49, 49);
+  height: 40px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: rgb(254, 255, 255);
+}
+.active {
+  background-color: #c22020;
+}
+.btn {
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  margin-right: 10px;
+  background: transparent;
+  color: rgb(17, 11, 11);
+  cursor: pointer;
+  border: 1px solid rgb(37, 37, 37);
+  font-size: 15px;
+}
+
+.ermg {
+  font-size: 20px;
+  color: rgb(150, 150, 150);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  width: 300px;
+  margin-left: 5px;
+}
+span {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(116, 115, 115);
+}

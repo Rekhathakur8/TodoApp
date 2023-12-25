@@ -3,6 +3,7 @@ import style from "./ToDo.module.css";
 import INput from "./INput";
 import ToDoItem from "./ToDoItems";
 import { useState } from "react";
+import WelcomeMessage from "./WelcomeMessage";
 
 function ToDoApp() {
   let [todoItems, setToDoItem] = useState([]);
@@ -24,6 +25,7 @@ function ToDoApp() {
       <div className={style.mainCenter}>
         <Heading></Heading>
         <INput OnNewItem={handleOnNewItem}></INput>
+        <WelcomeMessage TodoItemArray={todoItems}></WelcomeMessage>
         <ToDoItem todoItems={todoItems} onDelete={handleDeleteItem}></ToDoItem>
       </div>
     </>

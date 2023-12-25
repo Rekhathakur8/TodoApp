@@ -1,29 +1,28 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useRef } from "react";
 import style from "./ToDo.module.css";
+import { IoIosAddCircle } from "react-icons/io";
 
 function INput({ OnNewItem }) {
-  let [inItemVal, setInItemVal] = useState("");
+  // let [inItemVal, setInItemVal] = useState("");
+  const todoItemElement = useRef();
 
-  let handleNameChange = (event) => {
-    setInItemVal(event.target.value);
-  };
   const handleOnButtonCliked = () => {
-    OnNewItem(inItemVal);
-    setInItemVal("");
+    let todoName = todoItemElement.current.value;
+    OnNewItem(todoName);
+    todoItemElement.current.value = "";
   };
   return (
     <>
       <div className={style.InputMain}>
         <input
+          ref={todoItemElement}
           placeholder="Enter to do "
-          value={inItemVal}
-          onChange={handleNameChange}
           type="text"
           id={style.ip34}
         />
         <button className={style.inBtn} onClick={handleOnButtonCliked}>
-          Add
+          <IoIosAddCircle />
         </button>
       </div>
     </>
